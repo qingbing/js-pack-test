@@ -1,33 +1,52 @@
+// 导入
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
 
+// 组件导入
+import Layout from "../views/layouts/index.vue";
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home
-  },
-  {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
+    component: Layout,
+    children: [
+      {
+        path: "",
+        redirect: "index"
+      },
+      {
+        path: "index",
+        component: () => import("../views/Home.vue"),
+        meta: {
+          title: "首页"
+        }
+      },
+    ],
   },
   {
     path: "/form",
-    name: "表单项目",
-    component: () => import("../views/FormCreate.vue")
-  },
-  {
-    path: "/view",
-    name: "表单显示",
-    component: () => import("../views/FormView.vue")
+    component: Layout,
+    children: [
+      {
+        path: "",
+        redirect: "index"
+      },
+      {
+        path: "index",
+        component: () => import("../views/form/view.vue"),
+        meta: {
+          title: "表单项显示"
+        }
+      },
+      {
+        path: "create",
+        component: () => import("../views/form/create.vue"),
+        meta: {
+          title: "表单项填写"
+        }
+      }
+    ]
   }
 ];
 

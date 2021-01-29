@@ -11,13 +11,12 @@
       <element-form
         :formData="formData"
         :items="items"
-        :isForm="isForm"
         :viewFields="viewFields"
         :textFields="textFields"
       ></element-form>
 
       <el-form-item>
-        <el-button type="primary" @click="onSubmit">返回</el-button>
+        <el-button type="primary" @click="onSubmit">立即创建</el-button>
         <el-button>取消</el-button>
       </el-form-item>
     </el-form>
@@ -30,13 +29,15 @@
 
 <script>
 // 数据源获取
-import fieldsFunc from "./../data/field";
+import fieldsFunc from "./data/field";
+import { ajax } from "./../../utils/ajax";
+
 // 导出
 export default {
   data() {
     const { formData, items, viewFields, textFields } = fieldsFunc();
+
     return {
-      isForm: false,
       formData,
       items,
       viewFields,
@@ -51,3 +52,6 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+</style>
