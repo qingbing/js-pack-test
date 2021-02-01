@@ -1,10 +1,10 @@
 <template>
   <div class="about">
     <h1>This is an form-view page</h1>
-
     <el-form
       ref="formData"
       :model="formData"
+      :rules="rules"
       label-width="120px"
       label-position="left"
     >
@@ -13,6 +13,7 @@
         :items="items"
         :viewFields="viewFields"
         :textFields="textFields"
+        :rules="rules"
       ></element-form>
 
       <el-form-item>
@@ -21,6 +22,8 @@
       </el-form-item>
     </el-form>
     <h1>
+      <p>rules</p>
+      {{ rules }}
       <p>form</p>
       {{ formData }}
     </h1>
@@ -38,6 +41,7 @@ export default {
     const { formData, items, viewFields, textFields } = fieldsFunc();
 
     return {
+      rules: {},
       formData,
       items,
       viewFields,

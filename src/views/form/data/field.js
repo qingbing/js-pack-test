@@ -23,10 +23,10 @@ export default function () {
         maxlength: 10, // 最大输入长度
         minlength: 5, // 最小输入长度
         showWordLimit: true, // 显示字数统计，需要设置最大长度
-        rules: [
-
-        ]
-      }
+      },
+      rules: [
+        { type: "required" },
+      ]
     },
     {
       input_type: "input-password",
@@ -511,7 +511,10 @@ export default function () {
           'type': 'sex'
         },
         fetchUrl: "/auto-complete"
-      }
+      },
+      rules: [
+        { type: "required" },
+      ]
     },
 
   ];
