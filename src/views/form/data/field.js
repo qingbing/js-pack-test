@@ -29,13 +29,267 @@ export default function () {
       ]
     },
     {
+      input_type: "input-text",
+      field: "text1",
+      label: "枚举",
+      rules: [
+        { type: "required" },
+        { type: "enum", enum: ["nan", "nv"], }
+      ]
+    },
+    {
+      input_type: "input-text",
+      field: "email",
+      label: "邮箱",
+      rules: [
+        { type: "required" },
+        { type: "email", },
+        {
+          type: "callback", fields: ["select2",], params: { id: 55 }, callback(data, formData) {
+            // callback 如果判断有问题，直接返回错误信息，正常不做返回
+            console.log('callback', data, formData)
+            return "Error. There is something wrong!";
+          }
+        },
+        { type: "ajax", url: '/rule-ajax', fields: ["select2",], params: { id: 55 }, method: 'get' },
+      ]
+    },
+    {
+      input_type: "input-text",
+      field: "url",
+      label: "URL",
+      rules: [
+        { type: "required" },
+        { type: "url", }
+      ]
+    },
+    {
+      input_type: "input-text",
+      field: "regexp",
+      label: "Regexp",
+      rules: [
+        { type: "required" },
+        { type: "regexp", }
+      ]
+    },
+    {
+      input_type: "input-text",
+      field: "hex",
+      label: "Hex十六进制",
+      rules: [
+        { type: "required" },
+        { type: "hex", }
+      ]
+    },
+    {
+      input_type: "input-text",
+      field: "pattern",
+      label: "Pattern",
+      rules: [
+        { type: "required" },
+        { type: "pattern", pattern: "/^\\\d{2}$/" }
+      ]
+    },
+    {
+      input_type: "input-text",
+      field: "username",
+      label: "用户名",
+      rules: [
+        { type: "required" },
+        { type: "username", }
+      ]
+    },
+    {
+      input_type: "input-text",
+      field: "password-text",
+      label: "Password",
+      rules: [
+        { type: "required" },
+        { type: "password", }
+      ]
+    },
+    {
+      input_type: "input-text",
+      field: "compare-text",
+      label: "Compare",
+      rules: [
+        { type: "required" },
+        { type: "compare", compareField: "password-text", message: "密码确认不正确" }
+      ]
+    },
+    {
+      input_type: "input-text",
+      field: "zipcode",
+      label: "邮编",
+      rules: [
+        { type: "required" },
+        { type: "zipcode", }
+      ]
+    },
+    {
+      input_type: "input-text",
+      field: "mobile",
+      label: "手机",
+      rules: [
+        { type: "required" },
+        { type: "mobile", }
+      ]
+    },
+    {
+      input_type: "input-text",
+      field: "phone",
+      label: "座机",
+      rules: [
+        { type: "required" },
+        { type: "phone", }
+      ]
+    },
+    {
+      input_type: "input-text",
+      field: "contact",
+      label: "座机或手机联系方式",
+      rules: [
+        { type: "required" },
+        { type: "contact", }
+      ]
+    },
+    {
+      input_type: "input-text",
+      field: "fax",
+      label: "传真",
+      rules: [
+        { type: "required" },
+        { type: "fax", }
+      ]
+    },
+    {
+      input_type: "input-text",
+      field: "ipv4",
+      label: "Ip地址",
+      rules: [
+        { type: "required" },
+        { type: "ipv4", }
+      ]
+    },
+    {
+      input_type: "input-text",
+      field: "string1",
+      label: "String1",
+      rules: [
+        { type: "required" },
+        { type: "string", min: 2, }
+      ]
+    },
+    {
+      input_type: "input-text",
+      field: "string2",
+      label: "String2",
+      rules: [
+        { type: "required" },
+        { type: "string", max: 4, }
+      ]
+    },
+    {
+      input_type: "input-text",
+      field: "string3",
+      label: "String3",
+      rules: [
+        { type: "required" },
+        { type: "string", min: 2, max: 4, }
+      ]
+    },
+    {
+      input_type: "input-text",
+      field: "number11",
+      label: "number11",
+      rules: [
+        { type: "required" },
+        { type: "number", min: 20, }
+      ]
+    },
+    {
+      input_type: "input-text",
+      field: "number12",
+      label: "number12",
+      rules: [
+        { type: "required" },
+        { type: "number", max: 40, }
+      ]
+    },
+    {
+      input_type: "input-text",
+      field: "number13",
+      label: "number13",
+      rules: [
+        { type: "required" },
+        { type: "number", min: 20, max: 40, }
+      ]
+    },
+    {
+      input_type: "input-text",
+      field: "integer11",
+      label: "integer11",
+      rules: [
+        { type: "required" },
+        { type: "integer", min: 20, }
+      ]
+    },
+    {
+      input_type: "input-text",
+      field: "integer12",
+      label: "integer12",
+      rules: [
+        { type: "required" },
+        { type: "integer", max: 40, }
+      ]
+    },
+    {
+      input_type: "input-text",
+      field: "integer13",
+      label: "integer13",
+      rules: [
+        { type: "required" },
+        { type: "integer", min: 20, max: 40, }
+      ]
+    },
+    {
+      input_type: "input-text",
+      field: "float11",
+      label: "float11",
+      rules: [
+        { type: "required" },
+        { type: "float", min: 20, }
+      ]
+    },
+    {
+      input_type: "input-text",
+      field: "float12",
+      label: "float12",
+      rules: [
+        { type: "required" },
+        { type: "float", max: 40, }
+      ]
+    },
+    {
+      input_type: "input-text",
+      field: "float13",
+      label: "float13",
+      rules: [
+        { type: "required" },
+        { type: "float", min: 20, max: 40, }
+      ]
+    },
+    {
       input_type: "input-password",
       field: "password",
       label: "密码",
       exts: {
         showPassword: true,
         // placeholder: "请输入xxx",
-      }
+      },
+      rules: [
+        { type: "required" },
+      ],
     },
     {
       input_type: "input-area",
@@ -54,7 +308,10 @@ export default function () {
         rules: [
 
         ]
-      }
+      },
+      rules: [
+        { type: "required" },
+      ],
     },
     {
       input_type: "input-number",
@@ -62,10 +319,16 @@ export default function () {
       default: "11",
       label: "严格数字",
       exts: {
+        min: 2,
+        max: 20,
         step: 0.5,// 步阶
         precision: 2, // 小数精度
         stepStrictly: true, // 严格倍数
-      }
+      },
+      rules: [
+        { type: "required" },
+        { type: "number" },
+      ],
     },
     {
       input_type: "input-number",
@@ -73,7 +336,10 @@ export default function () {
       default: "11",
       label: "数字",
       exts: {
-      }
+      },
+      rules: [
+        { type: "required" },
+      ],
     },
     {
       input_type: "input-radio",
@@ -85,7 +351,11 @@ export default function () {
           apple: "苹果",
           pear: "梨子",
         }
-      }
+      },
+      rules: [
+        { type: "required" },
+        { type: "enum", }
+      ],
     },
     {
       input_type: "input-checkbox",
@@ -100,7 +370,29 @@ export default function () {
         },
         min: 1,
         max: 2
-      }
+      },
+      rules: [
+        { type: "required" },
+        { type: "array" },
+      ],
+    },
+    {
+      input_type: "input-checkbox",
+      field: "checkbox11",
+      // default: ["apple", "banana"],
+      label: "多选11",
+      exts: {
+        options: {
+          apple: "苹果",
+          pear: "梨子",
+          banana: "香蕉",
+          orange: "橙子",
+        },
+      },
+      rules: [
+        { type: "required" },
+        { type: "array", min: 1, max: 3, },
+      ],
     },
     {
       input_type: "input-select",
@@ -119,7 +411,11 @@ export default function () {
         },
         min: 1,
         max: 2
-      }
+      },
+      rules: [
+        { type: "required" },
+        { type: "enum", }
+      ],
     },
     {
       input_type: "input-select",
@@ -138,7 +434,10 @@ export default function () {
         },
         min: 1,
         max: 2
-      }
+      },
+      rules: [
+        { type: "required" },
+      ],
     },
     {
       input_type: "input-select",
@@ -173,13 +472,20 @@ export default function () {
 
         min: 1,
         max: 2
-      }
+      },
+      rules: [
+        { type: "required" },
+      ],
     },
     {
       input_type: "ele-switch",
       field: "switch1",
       default: 0,
       label: "开关1",
+      rules: [
+        { type: "required" },
+        { type: "boolean" }
+      ]
     },
     {
       input_type: "ele-switch",
@@ -188,7 +494,10 @@ export default function () {
       label: "开关2",
       exts: {
         options: ["apple", "pear"]
-      }
+      },
+      rules: [
+        { type: "required" },
+      ],
     },
     {
       input_type: "ele-switch",
@@ -206,7 +515,10 @@ export default function () {
             value: "pear",
           }
         }
-      }
+      },
+      rules: [
+        { type: "required" },
+      ],
     },
     {
       input_type: "ele-cascader",
@@ -289,7 +601,10 @@ export default function () {
 
           }
         ],
-      }
+      },
+      rules: [
+        { type: "required" },
+      ],
     },
     {
       input_type: "ele-slider",
@@ -309,7 +624,10 @@ export default function () {
           15: "15C",
           30: "30C",
         }
-      }
+      },
+      rules: [
+        { type: "required" },
+      ],
     },
     {
       input_type: "ele-slider",
@@ -322,7 +640,10 @@ export default function () {
         showStops: true,
         min: 10,
         max: 36,
-      }
+      },
+      rules: [
+        { type: "required" },
+      ],
     },
     {
       input_type: "ele-rate",
@@ -336,7 +657,10 @@ export default function () {
         highThreshold: 8, // 高分和中等分数的界限值，值本身被划分在高分中
         showText: true, // 是否显示辅助文字
         texts: ['极差', '失望', '一般', '满意', '惊喜'],
-      }
+      },
+      rules: [
+        { type: "required" },
+      ],
     },
     {
       input_type: "ele-color",
@@ -353,7 +677,10 @@ export default function () {
         //   '#1e90ff',
         //   '#c71585',
         // ]
-      }
+      },
+      rules: [
+        { type: "required" },
+      ],
     },
     {
       input_type: "time-picker",
@@ -367,7 +694,10 @@ export default function () {
         step: "00:45", // 步长
         // minTime: "05:00", // 小于该时间被禁用
         // maxTime: "12:00", // 大于该时间被禁用
-      }
+      },
+      rules: [
+        { type: "required" },
+      ],
     },
     {
       input_type: "time-picker",
@@ -378,7 +708,10 @@ export default function () {
         // placeholder: "", // 提示信息
         selectableRange: "12:00:00 - 19:00:00", // 范围内任意时间
         valueFormat: "HH:mm", // picker 时值的格式化
-      }
+      },
+      rules: [
+        { type: "required" },
+      ],
     },
     {
       input_type: "time-picker",
@@ -393,7 +726,26 @@ export default function () {
         // startPlaceholder: "", // 开始时间提示
         // endPlaceholder: "", // 结束时间提示
         // rangeSeparator: "至", // 连接文字
-      }
+      },
+      rules: [
+        { type: "required" },
+      ],
+    },
+    {
+      input_type: "datetime-picker",
+      field: "date1",
+      default: '2019-12-13 09:09:07',
+      label: "Date",
+      exts: {
+        type: "date", // 组件类型： year, month, date, week, datetime
+        valueFormat: "timestamp", // 返回值格式
+        format: "yyyy-MM-dd HH:mm:ss", // 组件框显示的格式
+      },
+      rules: [
+        { type: "required" },
+        { type: "date", min: "2021-02-01", max: "2021-03-01" },
+        // { type: "date", min: 1612108800000, max: 1614528000000 },
+      ]
     },
     {
       input_type: "datetime-picker",
@@ -418,7 +770,10 @@ export default function () {
         //     picker.$emit('pick', date);
         //   }
         // }],
-      }
+      },
+      rules: [
+        { type: "required" },
+      ],
     },
     {
       input_type: "datetime-picker",
@@ -447,7 +802,10 @@ export default function () {
         //     picker.$emit('pick', date);
         //   }
         // }],
-      }
+      },
+      rules: [
+        { type: "required" },
+      ],
     },
     {
       input_type: "ele-uploader",
@@ -483,7 +841,10 @@ export default function () {
         data: {}, // 上传时附带的参数
         withCredentials: true, // 支持发送 cookie 凭证信息
         accept: "image/png, image/jpeg", // 接受上传的文件类型
-      }
+      },
+      rules: [
+        { type: "required" },
+      ],
     },
     {
       input_type: "auto-complete",
@@ -514,7 +875,7 @@ export default function () {
       },
       rules: [
         { type: "required" },
-      ]
+      ],
     },
 
   ];
@@ -525,12 +886,40 @@ export default function () {
   let viewFields = [
     "text_field",
     "text",
+    "text1",
+    "email",
+    "url",
+    "regexp",
+    "hex",
+    "pattern",
+    "username",
+    "password-text",
+    "compare-text",
+    "zipcode",
+    "mobile",
+    "phone",
+    "contact",
+    "fax",
+    "ipv4",
+    "string1",
+    "string2",
+    "string3",
+    "number11",
+    "number12",
+    "number13",
+    "integer11",
+    "integer12",
+    "integer13",
+    "float11",
+    "float12",
+    "float13",
     "password",
     "textarea",
     "number1",
     "number2",
     "radio",
     "checkbox1",
+    "checkbox11",
     "select1",
     "select2",
     "select3",
@@ -545,6 +934,7 @@ export default function () {
     "timePicker1",
     "timePicker2",
     "timePicker3",
+    "date1",
     "datetimePicker1",
     "datetimePicker2",
     "uploader",

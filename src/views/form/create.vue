@@ -51,7 +51,14 @@ export default {
   methods: {
     // 提交函数
     onSubmit() {
-      console.log(JSON.stringify(this.formData));
+      this.$refs["formData"].validate((valid) => {
+        if (valid) {
+          console.log(JSON.stringify(this.formData));
+        } else {
+          console.log("error submit!!");
+          return false;
+        }
+      });
     },
   },
 };
