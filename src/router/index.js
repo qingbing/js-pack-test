@@ -47,6 +47,37 @@ const routes = [
         }
       }
     ]
+  },
+  {
+    path: "/editor",
+    component: Layout,
+    children: [
+      {
+        path: "",
+        redirect: "json"
+      },
+      {
+        path: "index",
+        component: () => import("../views/json-editor/index.vue"),
+        meta: {
+          title: "Vue-Json-Editor"
+        }
+      },
+      {
+        path: "form",
+        component: () => import("../views/json-editor/form.vue"),
+        meta: {
+          title: "Form填写"
+        }
+      },
+      {
+        path: "view",
+        component: () => import("../views/json-editor/view.vue"),
+        meta: {
+          title: "Form显示"
+        }
+      },
+    ]
   }
 ];
 

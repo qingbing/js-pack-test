@@ -39,7 +39,6 @@ import { ajax } from "./../../utils/ajax";
 export default {
   data() {
     const { formData, items, viewFields, textFields } = fieldsFunc();
-
     return {
       rules: {},
       formData,

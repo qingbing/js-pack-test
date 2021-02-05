@@ -881,8 +881,7 @@ export default function () {
   ];
 
   let formData = col_cloumn(items, "default", "field");
-  let textFields = [
-  ];
+  let textFields = [];
   let viewFields = [
     "text_field",
     "text",
