@@ -33,7 +33,6 @@
 <script>
 // 数据源获取
 import fieldsFunc from "./data/field";
-import { ajax } from "./../../utils/ajax";
 
 // 导出
 export default {
@@ -62,6 +61,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-</style>

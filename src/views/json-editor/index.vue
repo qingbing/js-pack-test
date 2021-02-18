@@ -27,7 +27,8 @@
 - @json-change: json编辑器内容改变时触发
 - @json-save: 点击保存时触发
 - @has-error: 发生错误时触发
-</pre>
+</pre
+    >
   </div>
 </template>
  <script>
@@ -77,16 +78,16 @@ export default {
 </script>
  
  <style>
-.code {
-  border: 1px dashed #ff6600;
-  text-align: left;
-  padding: 10px;
-}
 /* jsoneditor右上角默认有一个链接,加css去掉了 */
-.jsoneditor-poweredBy {
+div.jsoneditor-menu .jsoneditor-poweredBy {
   display: none;
 }
 .ace_scroller {
   text-align: left;
+}
+.code {
+  border: 1px dashed #ff6600;
+  text-align: left;
+  padding: 10px;
 }
 </style>
