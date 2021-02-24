@@ -49,12 +49,12 @@ const routes = [
     ]
   },
   {
-    path: "/editor",
+    path: "/json-editor",
     component: Layout,
     children: [
       {
         path: "",
-        redirect: "json"
+        redirect: "index"
       },
       {
         path: "index",
@@ -73,6 +73,37 @@ const routes = [
       {
         path: "view",
         component: () => import("../views/json-editor/view.vue"),
+        meta: {
+          title: "Form显示"
+        }
+      },
+    ]
+  },
+  {
+    path: "/quill-editor",
+    component: Layout,
+    children: [
+      {
+        path: "",
+        redirect: "index"
+      },
+      {
+        path: "index",
+        component: () => import("../views/quill-editor/index.vue"),
+        meta: {
+          title: "Vue-Quill-Editor"
+        }
+      },
+      {
+        path: "form",
+        component: () => import("../views/quill-editor/form.vue"),
+        meta: {
+          title: "Form填写"
+        }
+      },
+      {
+        path: "view",
+        component: () => import("../views/quill-editor/view.vue"),
         meta: {
           title: "Form显示"
         }

@@ -21,27 +21,53 @@ const items = [
     ]
   },
   {
-    "route": "/editor",
+    "route": "/json-editor",
     "icon": "el-icon-menu",
-    "label": "在线编辑器",
+    "label": "json 编辑器",
     "linkRoutes": {},
     "subItems": [
       {
-        "route": "/editor/index",
+        "route": "/json-editor/index",
         "icon": "el-icon-menu",
         "label": "Vue-Json-Editor",
         "linkRoutes": {}
       },
       {
-        "route": "/editor/form",
+        "route": "/json-editor/form",
         "icon": "el-icon-menu",
         "label": "Json封装输入",
         "linkRoutes": {}
       },
       {
-        "route": "/editor/view",
+        "route": "/json-editor/view",
         "icon": "el-icon-menu",
         "label": "Json封装显示",
+        "linkRoutes": {}
+      },
+    ]
+  },
+  {
+    "route": "/quill-editor",
+    "icon": "el-icon-menu",
+    "label": "Quill 编辑器",
+    "linkRoutes": {},
+    "subItems": [
+      {
+        "route": "/quill-editor/index",
+        "icon": "el-icon-menu",
+        "label": "Vue-Quill-Editor",
+        "linkRoutes": {}
+      },
+      {
+        "route": "/quill-editor/form",
+        "icon": "el-icon-menu",
+        "label": "Quill封装输入",
+        "linkRoutes": {}
+      },
+      {
+        "route": "/quill-editor/view",
+        "icon": "el-icon-menu",
+        "label": "Quill封装显示",
         "linkRoutes": {}
       },
     ]
