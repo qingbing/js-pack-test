@@ -69,8 +69,9 @@
   - Editor : 当前编辑器对象
   - cursorLocation : int 鼠标所在位置
   - resetUploader : function 获取 file-upload 的value 值的函数
-</pre>
-<pre class="code">
+</pre
+    >
+    <pre class="code">
 // @image-added 的一个示例
 ImageAdded(file, Editor, cursorLocation, resetUploader) {
   console.log("file", file);
@@ -81,7 +82,7 @@ ImageAdded(file, Editor, cursorLocation, resetUploader) {
   // 上传图片操作(上传至七牛)
   let formData = new FormData();
   let type = file.name.split(".");
-  if (type.length < 2) {
+  if (type.length &lt; 2) {
     return false;
   }
   type = type.pop();
@@ -122,11 +123,13 @@ ImageAdded(file, Editor, cursorLocation, resetUploader) {
   Editor.insertEmbed(cursorLocation, "image", url);
   resetUploader();
 }
-</pre>
+</pre
+    >
   </div>
 </template>
  <script>
 import { VueEditor } from "vue2-editor";
+import { uniqid } from "@qingbing/helper";
 export default {
   data() {
     return {
@@ -234,14 +237,7 @@ export default {
       resetUploader();
     },
     uniqueId() {
-      let rdNum = ("" + Date.now()).slice(-8);
-      let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_";
-      let len = str.length;
-      let res = "";
-      for (let i = 0; i < 8; i++) {
-        res += str[Math.floor(Math.random() * len)];
-      }
-      return res + rdNum;
+      return uniqid();
     },
   },
 };
