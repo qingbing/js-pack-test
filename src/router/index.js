@@ -109,6 +109,27 @@ const routes = [
         }
       },
     ]
+  },
+  {
+    path: "/other",
+    component: Layout,
+    children: [
+      {
+        path: "",
+        redirect: "high-light"
+      },
+      {
+        path: "index",
+        redirect: "high-light"
+      },
+      {
+        path: "high-light",
+        component: () => import("../views/other/high-light.vue"),
+        meta: {
+          title: "Vue-Code-High-Light"
+        }
+      },
+    ]
   }
 ];
 

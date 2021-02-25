@@ -72,6 +72,20 @@ const items = [
       },
     ]
   },
+  {
+    "route": "/other",
+    "icon": "el-icon-menu",
+    "label": "其它组件",
+    "linkRoutes": {},
+    "subItems": [
+      {
+        "route": "/other/high-light",
+        "icon": "el-icon-menu",
+        "label": "代码高亮",
+        "linkRoutes": {}
+      },
+    ]
+  },
 ];
 
 export default items;

@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@qingbing/element-form": "^1.0.4",
+    "@qingbing/element-highlight": "^1.0.0",
     "@qingbing/helper": "^1.0.5",
     "axios": "^0.21.1",
     "core-js": "^3.6.5",

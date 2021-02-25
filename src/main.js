@@ -10,7 +10,6 @@ Vue.config.productionTip = false;
 // 注意引入element-ui在Vue下，因为可能会被其他组件使用到
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
-
 Vue.use(ElementUI, {
   size: "medium" // 设置element-ui的默认大小
   // locale: enLang // 如果使用中文，无需设置，请删除
@@ -32,6 +31,9 @@ Vue.use(ElementForm, {
     // return res.data;
   }
 });
+// 代码高亮
+import Highlight from "@qingbing/element-highlight";
+Vue.use(Highlight);
 
 // Vue实例
 new Vue({
