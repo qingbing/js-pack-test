@@ -6,7 +6,7 @@
       v-model="content2"
       :id="uniqueId()"
       useCustomImageHandler
-      :editorToolbar="editorToolbar"
+      :editor-toolbar="editorToolbar"
       @image-added="handleImageAdded"
     ></vue-editor>
 
@@ -14,11 +14,11 @@
       v-model="content3"
       :id="uniqueId()"
       useCustomImageHandler
-      :editorToolbar="editorToolbar3"
+      :editor-toolbar="editorToolbar3"
       @image-added="handleImageAdded"
     ></vue-editor>
 
-    <pre class="code">
+    <pre class="text-left"><code>
 1. 接受参数
 - id : string
   - 默认"quill-container"，如果同一个页面有两个及以上编辑器，强烈建议手动设置
@@ -26,7 +26,7 @@
   - 绑定的数据字段
 - useCustomImageHandler : boolean
   - 默认 false，是否处理图片上传，为true时，需要指定 @image-added 用于处理图片上传，默认用 base64 编码图片
-- editorToolbar : array
+- editor-toolbar(editorToolbar) : array
   - 自定义工具栏
     - 标题 : {'header':[false, 1, 2, 3, 4, 5, 6]}
     - 加粗 : bold
@@ -69,9 +69,8 @@
   - Editor : 当前编辑器对象
   - cursorLocation : int 鼠标所在位置
   - resetUploader : function 获取 file-upload 的value 值的函数
-</pre
-    >
-    <pre class="code">
+</code></pre>
+    <pre class="text-left"><code class="language-js">
 // @image-added 的一个示例
 ImageAdded(file, Editor, cursorLocation, resetUploader) {
   console.log("file", file);
@@ -123,13 +122,14 @@ ImageAdded(file, Editor, cursorLocation, resetUploader) {
   Editor.insertEmbed(cursorLocation, "image", url);
   resetUploader();
 }
-</pre
+</code></pre
     >
   </div>
 </template>
  <script>
 import { VueEditor } from "vue2-editor";
 import { uniqid } from "@qingbing/helper";
+
 export default {
   data() {
     return {
@@ -161,24 +161,22 @@ export default {
         [{ indent: "-1" }, { indent: "+1" }], // outdent/indent
       ],
       editorToolbar3: [
-        [
-          "bold",
-          "italic",
-          "underline",
-          "strike",
-          "blockquote",
-          { align: "" },
-          { align: "center" },
-          { align: "right" },
-          { align: "justify" },
-          { list: "ordered" },
-          { list: "bullet" },
-          { script: "sub" },
-          { script: "super" },
-          "code-block",
-          "link",
-          "clean",
-        ],
+        "bold",
+        "italic",
+        "underline",
+        "strike",
+        "blockquote",
+        { align: "" },
+        { align: "center" },
+        { align: "right" },
+        { align: "justify" },
+        { list: "ordered" },
+        { list: "bullet" },
+        { script: "sub" },
+        { script: "super" },
+        "code-block",
+        "link",
+        "clean",
       ],
     };
   },
