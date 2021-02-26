@@ -73,6 +73,32 @@ const items = [
     ]
   },
   {
+    "route": "/md-editor",
+    "icon": "el-icon-menu",
+    "label": "Markdown 编辑器",
+    "linkRoutes": {},
+    "subItems": [
+      {
+        "route": "/md-editor/index",
+        "icon": "el-icon-menu",
+        "label": "markdown使用说明",
+        "linkRoutes": {}
+      },
+      {
+        "route": "/md-editor/create",
+        "icon": "el-icon-menu",
+        "label": "Markdown编辑器",
+        "linkRoutes": {}
+      },
+      {
+        "route": "/md-editor/view",
+        "icon": "el-icon-menu",
+        "label": "Markdown格式化",
+        "linkRoutes": {}
+      },
+    ]
+  },
+  {
     "route": "/other",
     "icon": "el-icon-menu",
     "label": "其它组件",

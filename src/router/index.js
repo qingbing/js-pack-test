@@ -111,6 +111,37 @@ const routes = [
     ]
   },
   {
+    path: "/md-editor",
+    component: Layout,
+    children: [
+      {
+        path: "",
+        redirect: "index"
+      },
+      {
+        path: "index",
+        component: () => import("../views/md-editor/index.vue"),
+        meta: {
+          title: "Vue-Markdown-Editor 使用方法"
+        }
+      },
+      {
+        path: "create",
+        component: () => import("../views/md-editor/create.vue"),
+        meta: {
+          title: "编辑器填写"
+        }
+      },
+      {
+        path: "view",
+        component: () => import("../views/md-editor/view.vue"),
+        meta: {
+          title: "Markdown格式化显示"
+        }
+      },
+    ]
+  },
+  {
     path: "/other",
     component: Layout,
     children: [
