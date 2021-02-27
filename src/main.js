@@ -32,8 +32,13 @@ Vue.use(ElementForm, {
   }
 });
 // 代码高亮
-import Highlight from "@qingbing/element-highlight";
+import Highlight from "@qingbing/vue-highlight";
 Vue.use(Highlight);
+
+// markdown 在线编辑器
+import mavonEditor from 'mavon-editor';
+import 'mavon-editor/dist/css/index.css';
+Vue.use(mavonEditor);
 
 // Vue实例
 new Vue({
