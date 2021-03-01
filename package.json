@@ -11,7 +11,7 @@
     "@qingbing/element-form": "^1.0.6",
     "@qingbing/helper": "^1.0.5",
     "@qingbing/vue-highlight": "^1.0.2",
-    "@qingbing/vue-markdown": "^1.0.0",
+    "@qingbing/vue-markdown": "^1.0.2",
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "element-ui": "^2.14.1",
