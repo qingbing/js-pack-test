@@ -1,7 +1,7 @@
 <template>
   <div class="text-left">
     <h3>1.静态html</h3>
-    <pre v-highlight><code class="language-js">var date = new Date(); 
+    <pre v-highlight:rainbow><code class="language-js">var date = new Date(); 
 var a = 5;
 var b = 6;
 var sum = a + b;
@@ -9,12 +9,12 @@ console.log(sum);
 </code></pre>
 
     <h3>2.动态加载字段</h3>
-    <pre v-highlight="content1"><code></code></pre>
+    <!-- <pre v-highlight="content1"><code></code></pre>
 
     <h3>3.动态加载html字段</h3>
     <div v-html="content2" v-highlight></div>
 
-    <div v-html="content3" v-highlight></div>
+    <div v-html="content3" v-highlight></div> -->
 
     <h3>100.使用方法</h3>
     <pre class="border">
