@@ -142,6 +142,76 @@ const routes = [
     ]
   },
   {
+    path: "/table",
+    component: Layout,
+    children: [
+      {
+        path: "",
+        redirect: "index"
+      },
+      {
+        path: "index",
+        redirect: "base"
+      },
+      {
+        path: "base",
+        component: () => import("../views/table/base.vue"),
+        meta: {
+          title: "基本Table"
+        }
+      },
+      {
+        path: "base-remote",
+        component: () => import("../views/table/base-remote.vue"),
+        meta: {
+          title: "动态Table"
+        }
+      },
+      {
+        path: "pagination",
+        component: () => import("../views/table/pagination.vue"),
+        meta: {
+          title: "分页Table"
+        }
+      },
+      {
+        path: "pagination-remote",
+        component: () => import("../views/table/pagination-remote.vue"),
+        meta: {
+          title: "编辑Table"
+        }
+      },
+      {
+        path: "edit-base",
+        component: () => import("../views/table/edit-base.vue"),
+        meta: {
+          title: "动态分页"
+        }
+      },
+      {
+        path: "edit-base-remote",
+        component: () => import("../views/table/edit-base-remote.vue"),
+        meta: {
+          title: "远程编辑Table"
+        }
+      },
+      {
+        path: "edit-pagination",
+        component: () => import("../views/table/edit-pagination.vue"),
+        meta: {
+          title: "分页编辑Table"
+        }
+      },
+      {
+        path: "edit-pagination-remote",
+        component: () => import("../views/table/edit-pagination-remote.vue"),
+        meta: {
+          title: "远程分页编辑"
+        }
+      },
+    ]
+  },
+  {
     path: "/other",
     component: Layout,
     children: [

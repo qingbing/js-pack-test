@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@qingbing/element-form": "^1.0.6",
+    "@qingbing/element-table": "^1.0.0",
     "@qingbing/helper": "^1.0.5",
     "@qingbing/vue-highlight": "^1.0.3",
     "@qingbing/vue-markdown": "^1.0.2",

@@ -1,7 +1,5 @@
 import request from "./request";
 
-
-
 export  function labels() {
   const params = {
     type: "sex"

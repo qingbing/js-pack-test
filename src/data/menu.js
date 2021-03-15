@@ -99,6 +99,62 @@ const items = [
     ]
   },
   {
+    "route": "/table",
+    "icon": "el-icon-menu",
+    "label": "Table 组件",
+    "linkRoutes": {},
+    "subItems": [
+      {
+        "route": "/table/base",
+        "icon": "el-icon-menu",
+        "label": "基本Table",
+        "linkRoutes": {}
+      },
+      {
+        "route": "/table/base-remote",
+        "icon": "el-icon-menu",
+        "label": "动态Table",
+        "linkRoutes": {}
+      },
+      {
+        "route": "/table/pagination",
+        "icon": "el-icon-menu",
+        "label": "分页Table",
+        "linkRoutes": {}
+      },
+      {
+        "route": "/table/pagination-remote",
+        "icon": "el-icon-menu",
+        "label": "动态分页",
+        "linkRoutes": {}
+      },
+      {
+        "route": "/table/edit-base",
+        "icon": "el-icon-menu",
+        "label": "编辑Table",
+        "linkRoutes": {}
+      },
+      {
+        "route": "/table/edit-base-remote",
+        "icon": "el-icon-menu",
+        "label": "远程编辑Table",
+        "linkRoutes": {}
+      },
+      {
+        "route": "/table/edit-pagination",
+        "icon": "el-icon-menu",
+        "label": "分页编辑Table",
+        "linkRoutes": {}
+      },
+      {
+        "route": "/table/edit-pagination-remote",
+        "icon": "el-icon-menu",
+        "label": "远程分页编辑",
+        "linkRoutes": {}
+      },
+    ]
+  },
+  {
     "route": "/other",
     "icon": "el-icon-menu",
     "label": "其它组件",

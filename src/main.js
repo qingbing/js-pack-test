@@ -2,8 +2,6 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
-import request from "./utils/request";
-import { isString } from "@qingbing/helper";
 
 Vue.config.productionTip = false;
 
@@ -16,20 +14,9 @@ Vue.use(ElementUI, {
 });
 
 import ElementForm from "@qingbing/element-form";
+import { ajaxMethod } from "./utils/unit";
 Vue.use(ElementForm, {
-  async ajaxMethod(url, data, method) {
-    const requestData = { url };
-    if (isString(method) && "get" == method.toLowerCase()) {
-      requestData.method = 'get';
-      requestData.params = data;
-    } else {
-      requestData.method = 'post';
-      requestData.data = data;
-    }
-    return (await request(requestData)).data;
-    // const res = await request(requestData);
-    // return res.data;
-  }
+  ajaxMethod
 });
 // 代码高亮
 import Highlight from "@qingbing/vue-highlight";
