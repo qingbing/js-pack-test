@@ -10,18 +10,18 @@ import request from "./request";
  * @param {*} callback 回调函数
  */
 export async function ajaxMethod(url, params, method, callback) {
-  const reqParams = { url };
+  const req = { url };
   if (isString(method) && "get" == method.toLowerCase()) {
-    reqParams.method = 'get';
-    reqParams.params = params;
+    req.method = 'get';
+    req.params = params;
   } else {
-    reqParams.method = 'post';
-    reqParams.data = params;
+    req.method = 'post';
+    req.data = params;
   }
   if (isFunction(callback)) {
-    return request(reqParams).then(res => {
+    return request(req).then(res => {
       callback(res.data);
     }).catch(err => err);
   }
-  return (await request(reqParams)).data;
+  return (await request(req)).data;
 }
