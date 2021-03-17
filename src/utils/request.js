@@ -22,12 +22,12 @@ request.interceptors.request.use(
 // Axios 响应拦截
 request.interceptors.response.use(
   response => {
-    const data = response.data;
-    if (0 == data.code) {
-      return data;
+    const res = response.data;
+    if (0 == res.code) {
+      return res;
     }
-    Message({ message: data.msg, type: "error" });
-    return Promise.reject(data.msg);
+    Message({ message: res.msg, type: "error" });
+    return Promise.reject(res.msg);
   },
   error => {
     Message({ message: `响应失败: ${error}`, type: "error" });

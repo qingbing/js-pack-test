@@ -32,15 +32,15 @@ export default {
   methods: {
     handView() {
       console.log("handView")
-      console.log(this.row.address)
+      console.log(this.row)
     },
     handEdit() {
       console.log("handhandEdit¬View")
-      console.log(this.row.address)
+      console.log(this.row)
     },
     handDelete() {
       console.log("handDelete")
-      console.log(this.row.address)
+      console.log(this.row)
     },
   },
 };

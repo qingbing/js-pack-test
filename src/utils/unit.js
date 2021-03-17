@@ -20,8 +20,8 @@ export async function ajaxMethod(url, params, method, callback) {
   }
   if (isFunction(callback)) {
     return request(req).then(res => {
-      callback(res.data);
+      callback(res.res);
     }).catch(err => err);
   }
-  return (await request(req)).data;
+  return (await request(req)).res;
 }
