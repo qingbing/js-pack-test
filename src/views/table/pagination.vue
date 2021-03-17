@@ -61,7 +61,14 @@ export default {
       console.log(this.$refs["pageTable"].refreshTable());
     },
     getHeaders(cb) {
-      ajaxMethod("/header-user", { type: "user" }, "post", (res) => cb(res));
+      cb([
+        { name: "_idx", label: "序号", fixed: "left" },
+        { name: "date", label: "日期", width: "100", default: "0000-00-00" },
+        { name: "name", label: "姓名", width: "150" },
+        { name: "age", label: "年龄", width: "50" },
+        { name: "sex", label: "性别", width: "50", align: "left" },
+        { name: "operate", label: "操作", component: "operate" },
+      ]);
     },
     getData(cb) {
       ajaxMethod(
