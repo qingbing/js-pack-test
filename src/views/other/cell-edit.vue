@@ -150,9 +150,6 @@ export default {
         (res) => cb(res)
       );
     },
-    isEditing() {
-      return !!this.isEdit;
-    },
   },
 
 };

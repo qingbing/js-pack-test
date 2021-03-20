@@ -28,7 +28,16 @@ export default {
         { name: "name", label: "姓名", width: "150" },
         { name: "age", label: "年龄", width: "50" },
         { name: "sex", label: "性别", width: "50", align: "left" },
-        { name: "operate", label: "操作", component: "operate" },
+        {
+          name: "operate",
+          label: "操作",
+          component: "operate",
+          params: {
+            addUrl: "/user-add",
+            editUrl: "/user-edit",
+            viewUrl: "/user-view",
+          },
+        },
       ]);
     },
     getData(cb) {
