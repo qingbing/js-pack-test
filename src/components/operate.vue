@@ -15,7 +15,7 @@ export default {
     },
     index: {
       type: Number,
-      require: false,
+      require: true,
     },
     property: {
       type: String,
@@ -25,22 +25,30 @@ export default {
       type: Object,
       require: false,
     },
+    params: {
+      type: Object,
+      require: true,
+      default: () => {
+        return {};
+      },
+    },
   },
   data() {
     return {};
   },
   methods: {
     handView() {
-      console.log("handView")
-      console.log(this.row)
+      console.log("handView");
+      console.log(this.row);
+      console.log(this.params);
     },
     handEdit() {
-      console.log("handhandEdit¬View")
-      console.log(this.row)
+      console.log("handhandEdit¬View");
+      console.log(this.row);
     },
     handDelete() {
-      console.log("handDelete")
-      console.log(this.row)
+      console.log("handDelete");
+      console.log(this.row);
     },
   },
 };
