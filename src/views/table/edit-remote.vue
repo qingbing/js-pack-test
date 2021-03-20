@@ -5,6 +5,7 @@
       :getHeaders="getHeaders"
       :getTableData="getData"
       :beforeRender="beforeRender"
+      :pagination="pagination"
     ></e-table>
   </div>
 </template>
@@ -22,6 +23,10 @@ export default {
   },
   data() {
     return {
+      pagination: {
+        pageNo: 1,
+        pageSize: 15,
+      },
       beforeRender(item, idx) {},
     };
   },
@@ -104,37 +109,12 @@ export default {
       ]);
     },
     getData(cb) {
-      cb([
-        {
-          id: "1",
-          username: "RzW",
-          is_open: 1,
-          name: "万磊",
-          sex: "nan",
-          age: "22",
-          date: "2011-06-18",
-          info: "电的更看事众心中响求型可适千情。",
-        },
-        {
-          id: "2",
-          username: "s3Y",
-          is_open: "0",
-          name: "乔洋",
-          sex: "nv",
-          age: "24",
-          date: "1987-09-06",
-          info: "置个京等拉己指林众通外手变意老。",
-        },
-        {
-          id: "3",
-          username: "mc3h#F",
-          name: "孔伟",
-          sex: "2",
-          age: "18",
-          date: "2009-03-22",
-          info: "影民离世文为任置格资支放你高京。",
-        },
-      ]);
+      ajaxMethod(
+        "/user-pagination",
+        merge(this.pagination, this.queryForm),
+        "post",
+        (res) => cb(res)
+      );
     },
   },
 };

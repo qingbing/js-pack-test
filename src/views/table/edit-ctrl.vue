@@ -1,10 +1,18 @@
 <template>
   <div>
+    <el-divider>控制表格编辑（元素编辑）{{ config }}{{ editable }}</el-divider>
+    <celledit
+      property="isEdit"
+      :row="config"
+      :params="config.params"
+    ></celledit>
+
     <el-divider>表格编辑</el-divider>
     <e-table
       :getHeaders="getHeaders"
       :getTableData="getData"
       :beforeRender="beforeRender"
+      :editable="editable"
     ></e-table>
   </div>
 </template>
@@ -22,8 +30,17 @@ export default {
   },
   data() {
     return {
+      config: {
+        isEdit: "0",
+        params: { type: "switch" },
+      },
       beforeRender(item, idx) {},
     };
+  },
+  computed: {
+    editable() {
+      return "0" !== this.config.isEdit;
+    },
   },
   methods: {
     getHeaders(cb) {

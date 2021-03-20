@@ -178,37 +178,30 @@ const routes = [
         path: "pagination-remote",
         component: () => import("../views/table/pagination-remote.vue"),
         meta: {
-          title: "编辑Table"
+          title: "远程分页"
         }
       },
       {
         path: "edit-base",
         component: () => import("../views/table/edit-base.vue"),
         meta: {
-          title: "动态分页"
+          title: "编辑Table"
         }
       },
       {
-        path: "edit-base-remote",
-        component: () => import("../views/table/edit-base-remote.vue"),
+        path: "edit-ctrl",
+        component: () => import("../views/table/edit-ctrl.vue"),
+        meta: {
+          title: "可控编辑Table"
+        }
+      },
+      {
+        path: "edit-remote",
+        component: () => import("../views/table/edit-remote.vue"),
         meta: {
           title: "远程编辑Table"
         }
-      },
-      {
-        path: "edit-pagination",
-        component: () => import("../views/table/edit-pagination.vue"),
-        meta: {
-          title: "分页编辑Table"
-        }
-      },
-      {
-        path: "edit-pagination-remote",
-        component: () => import("../views/table/edit-pagination-remote.vue"),
-        meta: {
-          title: "远程分页编辑"
-        }
-      },
+      }
     ]
   },
   {

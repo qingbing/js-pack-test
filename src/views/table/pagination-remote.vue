@@ -44,7 +44,6 @@ export default {
   },
   data() {
     return {
-      refreshFlag: 1,
       pagination: {
         pageNo: 1,
         pageSize: 15,

@@ -135,21 +135,15 @@ const items = [
         "linkRoutes": {}
       },
       {
-        "route": "/table/edit-base-remote",
+        "route": "/table/edit-ctrl",
+        "icon": "el-icon-menu",
+        "label": "可控编辑Table",
+        "linkRoutes": {}
+      },
+      {
+        "route": "/table/edit-remote",
         "icon": "el-icon-menu",
         "label": "远程编辑Table",
-        "linkRoutes": {}
-      },
-      {
-        "route": "/table/edit-pagination",
-        "icon": "el-icon-menu",
-        "label": "分页编辑Table",
-        "linkRoutes": {}
-      },
-      {
-        "route": "/table/edit-pagination-remote",
-        "icon": "el-icon-menu",
-        "label": "远程分页编辑",
         "linkRoutes": {}
       },
     ]
