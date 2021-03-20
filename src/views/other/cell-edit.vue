@@ -138,8 +138,6 @@ export default {
   },
   computed: {
     editable() {
-      console.log(this.config.isEdit)
-      console.log("0" !== this.config.isEdit)
       return "0" !== this.config.isEdit;
     },
   },
