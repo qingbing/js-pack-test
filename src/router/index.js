@@ -230,6 +230,13 @@ const routes = [
           title: "Vue-Code-High-Light"
         }
       },
+      {
+        path: "cell-edit",
+        component: () => import("../views/other/cell-edit.vue"),
+        meta: {
+          title: "Cell edit"
+        }
+      },
     ]
   }
 ];

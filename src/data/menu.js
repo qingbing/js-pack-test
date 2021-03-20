@@ -166,6 +166,12 @@ const items = [
         "label": "代码高亮",
         "linkRoutes": {}
       },
+      {
+        "route": "/other/cell-edit",
+        "icon": "el-icon-menu",
+        "label": "单元格编辑",
+        "linkRoutes": {}
+      },
     ]
   },
 ];
