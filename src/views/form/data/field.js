@@ -239,7 +239,6 @@ export default function () {
         // maxlength: 10, // 最大输入长度
         // minlength: 5, // 最小输入长度
         showWordLimit: true, // 显示字数统计，需要设置最大长度
-        rules: []
       },
       rules: [{ type: "required" }]
     },
@@ -574,22 +573,6 @@ export default function () {
     },
     timePicker1: {
       input_type: "time-picker",
-      field: "timePicker1",
-      default: "16:00:00",
-      label: "时间1",
-      exts: {
-        // timer-select
-        // placeholder: "", // 提示信息
-        start: "00:00", // 开始时间
-        end: "24:50", // 结束时间
-        step: "00:45" // 步长
-        // minTime: "05:00", // 小于该时间被禁用
-        // maxTime: "12:00", // 大于该时间被禁用
-      },
-      rules: [{ type: "required" }]
-    },
-    timePicker2: {
-      input_type: "time-picker",
       field: "timePicker2",
       default: "16:00:00",
       label: "时间1",
@@ -601,14 +584,13 @@ export default function () {
       },
       rules: [{ type: "required" }]
     },
-    timePicker3: {
+    timePicker2: {
       input_type: "time-picker",
       field: "timePicker3",
       default: ["16:00", "17:00"],
       label: "时间范围",
       exts: {
-        // time-picker-range
-        range: true, // 是否开启时间段，开启值支持picker模式
+        isRange: true,
         // placeholder: "", // 提示信息
         selectableRange: "12:00:00 - 19:00:00", // 范围内任意时间
         valueFormat: "HH:mm" // picker 时值的格式化
@@ -625,13 +607,9 @@ export default function () {
       label: "Date",
       exts: {
         type: "date", // 组件类型： year, month, date, week, datetime
-        valueFormat: "timestamp", // 返回值格式
-        format: "yyyy-MM-dd HH:mm:ss" // 组件框显示的格式
       },
       rules: [
         { type: "required" },
-        { type: "date", min: "2021-02-01", max: "2021-03-01" }
-        // { type: "date", min: 1612108800000, max: 1614528000000 },
       ]
     },
     datetimePicker1: {
@@ -667,7 +645,7 @@ export default function () {
       label: "日期2",
       exts: {
         type: "datetimerange", // 组件类型： monthrange, daterange, datetimerange
-        timeSource: "future" // future ： 未来时间， past : 过去时间
+        timeSource: "past" // future ： 未来时间， past : 过去时间
         // valueFormat: "yyyy-MM-dd", // 返回值格式
         // format: "yyyy,MM,dd", // 组件框显示的格式
         // rangeSeparator, // 连接符号

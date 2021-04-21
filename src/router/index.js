@@ -33,6 +33,27 @@ const routes = [
         redirect: "index"
       },
       {
+        path: "source",
+        component: () => import("../views/form/source.vue"),
+        meta: {
+          title: "源码显示"
+        }
+      },
+      {
+        path: "common",
+        component: () => import("../views/form/common.vue"),
+        meta: {
+          title: "基础表单"
+        }
+      },
+      {
+        path: "feature",
+        component: () => import("../views/form/feature.vue"),
+        meta: {
+          title: "功能表单"
+        }
+      },
+      {
         path: "index",
         component: () => import("../views/form/view.vue"),
         meta: {
@@ -45,7 +66,7 @@ const routes = [
         meta: {
           title: "表单项填写"
         }
-      }
+      },
     ]
   },
   {
