@@ -601,7 +601,7 @@ export default function () {
       rules: [{ type: "required" }]
     },
     date1: {
-      input_type: "datetime-picker",
+      input_type: "date-picker",
       field: "date1",
       default: "2019-12-13 09:09:07",
       label: "Date",
@@ -613,7 +613,7 @@ export default function () {
       ]
     },
     datetimePicker1: {
-      input_type: "datetime-picker",
+      input_type: "date-picker",
       field: "datetimePicker1",
       // default: "2000-03-02 13:00:03",
       label: "日期1",
@@ -639,7 +639,7 @@ export default function () {
       rules: [{ type: "required" }]
     },
     datetimePicker2: {
-      input_type: "datetime-picker",
+      input_type: "date-picker",
       field: "datetimePicker2",
       default: ["2021-01-19 00:00:00", "2021-02-25 00:00:00"],
       label: "日期2",

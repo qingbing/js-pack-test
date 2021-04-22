@@ -226,7 +226,7 @@ export default function () {
       rules: [{ type: "required" }]
     },
     date: {
-      input_type: "datetime-picker",
+      input_type: "date-picker",
       field: "date",
       default: "2019-12-13",
       label: "日期",
@@ -256,7 +256,7 @@ export default function () {
       rules: [{ type: "required" }]
     },
     daterange: {
-      input_type: "datetime-picker",
+      input_type: "date-picker",
       field: "daterange",
       default: ["2021-04-08", "2021-05-04"],
       label: "日期范围",
@@ -266,7 +266,7 @@ export default function () {
       rules: [{ type: "required" }]
     },
     month: {
-      input_type: "datetime-picker",
+      input_type: "date-picker",
       field: "month",
       default: "2021-07",
       label: "月",
@@ -276,7 +276,7 @@ export default function () {
       rules: [{ type: "required" }]
     },
     monthrange: {
-      input_type: "datetime-picker",
+      input_type: "date-picker",
       field: "monthrange",
       default: ["2021-07", "2022-05"],
       label: "月份范围",
@@ -286,7 +286,7 @@ export default function () {
       rules: [{ type: "required" }]
     },
     year: {
-      input_type: "datetime-picker",
+      input_type: "date-picker",
       field: "year",
       default: "2022",
       label: "年",
@@ -296,7 +296,7 @@ export default function () {
       rules: [{ type: "required" }]
     },
     week: {
-      input_type: "datetime-picker",
+      input_type: "date-picker",
       field: "week",
       default: "2021-04-19",
       label: "周",
@@ -306,7 +306,7 @@ export default function () {
       rules: [{ type: "required" }]
     },
     datetime: {
-      input_type: "datetime-picker",
+      input_type: "date-picker",
       field: "datetime",
       default: "2021-04-15 00:00:00",
       label: "时间",
@@ -316,7 +316,7 @@ export default function () {
       rules: [{ type: "required" }]
     },
     datetimerange: {
-      input_type: "datetime-picker",
+      input_type: "date-picker",
       field: "datetimerange",
       default: ["2021-04-15 00:00:00", "2021-05-21 00:00:00"],
       label: "时间范围",
@@ -326,7 +326,7 @@ export default function () {
       rules: [{ type: "required" }]
     },
     dates: {
-      input_type: "datetime-picker",
+      input_type: "date-picker",
       field: "dates",
       default: ["2021-04-13", "2021-04-14", "2021-04-21"],
       label: "多日期选择",
