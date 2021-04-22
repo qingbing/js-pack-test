@@ -255,6 +255,16 @@ export default function () {
       },
       rules: [{ type: "required" }]
     },
+    dateTest: {
+      input_type: "date-picker",
+      field: "dateTest",
+      default: "1000-01-01",
+      label: "日期测试",
+      exts: {
+        type: "date"
+      },
+      rules: [{ type: "required" }]
+    },
     daterange: {
       input_type: "date-picker",
       field: "daterange",
@@ -344,7 +354,7 @@ export default function () {
       exts: {
         action: "https://jsonplaceholder.typicode.com/posts/", //上传URL，必填
         // 上传前检查
-        beforeUpload: function(file, uploader) {
+        beforeUpload: function (file, uploader) {
           console.log(file);
           uploader.data.token = "11111";
           const isJPG = file.type === "image/jpeg";
