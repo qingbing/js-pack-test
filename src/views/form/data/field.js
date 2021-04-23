@@ -267,12 +267,12 @@ export default function () {
     radio: {
       input_type: "input-radio",
       field: "radio",
-      default: "apple",
+      default: 1,
       label: "单选",
       exts: {
         options: {
-          apple: "苹果",
-          pear: "梨子"
+          0: "苹果",
+          1: "梨子"
         }
       },
       rules: [{ type: "required" }, { type: "enum" }]
@@ -280,13 +280,13 @@ export default function () {
     checkbox1: {
       input_type: "input-checkbox",
       field: "checkbox1",
-      default: ["apple", "banana"],
+      default: [1, 2],
       label: "多选",
       exts: {
         options: {
-          apple: "苹果",
-          pear: "梨子",
-          banana: "香蕉"
+          0: "苹果",
+          1: "梨子",
+          2: "香蕉"
         },
         min: 1,
         max: 2
