@@ -32,6 +32,7 @@
 <script>
 // 导入组件
 import fieldsFunc from "./data/field";
+
 // 导出
 export default {
   data() {
@@ -41,7 +42,7 @@ export default {
       formData,
       items,
       viewFields,
-      textFields,
+      textFields: [],
     };
   },
   components: {},

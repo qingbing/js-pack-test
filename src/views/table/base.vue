@@ -1,9 +1,8 @@
 <template>
   <div>
-    <e-table
-      :getHeaders="getHeaders"
-      :getTableData="getData"
-      :beforeRender="beforeRender"
+    <e-table :getHeaders="getHeaders"
+     :getTableData="getData"
+    @beforeRender="beforeRender"
     ></e-table>
   </div>
 </template>
@@ -17,19 +16,49 @@ export default {
   },
   data() {
     return {
-      beforeRender(item, idx) {},
     };
   },
   methods: {
+    beforeRender: (item, idx) => {
+      item.xx = idx;
+      console.log(item);
+    },
     getHeaders(cb) {
+      /*
       cb([
-        { name: "_idx", label: "序号", fixed: "left" },
-        { name: "date", label: "日期", width: "100", default: "0000-00-00" },
-        { name: "name", label: "姓名", width: "150" },
-        { name: "age", label: "年龄", width: "50" },
-        { name: "sex", label: "性别", width: "50", align: "left" },
+        { field: "_idx", label: "序号", fixed: "left" },
         {
-          name: "operate",
+          field: "date",
+          label: "日期",
+          width: "100",
+          default: "0000-00-00"
+        },
+        { field: "name", label: "姓名", width: "150" },
+        { field: "age", label: "年龄", width: "50" },
+        { field: "sex", label: "性别", width: "50", align: "left" },
+        {
+          field: "operate",
+          label: "操作",
+          component: "operate",
+          params: {
+            addUrl: "/user-add",
+            editUrl: "/user-edit",
+            viewUrl: "/user-view"
+          }
+        }
+      ]);
+      */
+      cb({
+        _idx: { label: "序号", fixed: "left" },
+        date: {
+          label: "日期",
+          width: "100",
+          default: "0000-00-00",
+        },
+        name: { label: "姓名", width: "150" },
+        age: { label: "年龄", width: "50" },
+        sex: { label: "性别", width: "50", align: "left" },
+        operate: {
           label: "操作",
           component: "operate",
           params: {
@@ -38,7 +67,7 @@ export default {
             viewUrl: "/user-view",
           },
         },
-      ]);
+      });
     },
     getData(cb) {
       cb([
@@ -47,7 +76,7 @@ export default {
           name: "万磊",
           sex: "女",
           age: 22,
-          date: "2011-06-18",
+          // date: "2011-06-18",
           info: "电的更看事众心中响求型可适千情。",
         },
         {
@@ -71,6 +100,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-</style>

@@ -36,15 +36,21 @@ export default function () {
     }
   ];
 
-  let formData = col_cloumn(items, "default", "field");
-  let textFields = [];
-  let viewFields = [
-    "username",
-    "email",
-    "remark"
-  ];
+  const itemObjs = {};
+  const textFields = [];
+  const viewFields = [];
+  const formData = {};
+  for (const key in items) {
+    if (Object.hasOwnProperty.call(items, key)) {
+      const item = items[key];
+      itemObjs[item.field] = item;
+      textFields.push(item.field);
+      viewFields.push(item.field);
+      formData[item.field] = item.default ? item.default : "";
+    }
+  }
   return {
-    items,
+    items: itemObjs,
     formData,
     textFields,
     viewFields,

@@ -41,7 +41,7 @@ export default {
       formData,
       items,
       viewFields,
-      textFields,
+      textFields:[],
     };
   },
   components: {},

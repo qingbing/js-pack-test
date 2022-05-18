@@ -65,29 +65,29 @@ const items = [
     ]
   },
   {
-    route: "/quill-editor",
+    route: "/vue-editor",
     icon: "el-icon-menu",
-    label: "Quill 编辑器",
+    label: "Vue 编辑器",
     linkRoutes: {},
     subItems: [
       {
-        route: "/quill-editor/index",
+        route: "/vue-editor/index",
         icon: "el-icon-menu",
-        label: "Vue-Quill-Editor",
+        label: "Vue-Editor",
         linkRoutes: {}
       },
       {
-        route: "/quill-editor/form",
+        route: "/vue-editor/form",
         icon: "el-icon-menu",
-        label: "Quill封装输入",
+        label: "Vue-Editor封装输入",
         linkRoutes: {}
       },
       {
-        route: "/quill-editor/view",
+        route: "/vue-editor/view",
         icon: "el-icon-menu",
-        label: "Quill封装显示",
+        label: "Vue-Editor封装显示",
         linkRoutes: {}
-      }
+      },
     ]
   },
   {

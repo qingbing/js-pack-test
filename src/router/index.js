@@ -101,7 +101,7 @@ const routes = [
     ]
   },
   {
-    path: "/quill-editor",
+    path: "/vue-editor",
     component: Layout,
     children: [
       {
@@ -110,21 +110,21 @@ const routes = [
       },
       {
         path: "index",
-        component: () => import("../views/quill-editor/index.vue"),
+        component: () => import("../views/vue-editor/index.vue"),
         meta: {
           title: "Vue-Quill-Editor"
         }
       },
       {
         path: "form",
-        component: () => import("../views/quill-editor/form.vue"),
+        component: () => import("../views/vue-editor/form.vue"),
         meta: {
           title: "Form填写"
         }
       },
       {
         path: "view",
-        component: () => import("../views/quill-editor/view.vue"),
+        component: () => import("../views/vue-editor/view.vue"),
         meta: {
           title: "Form显示"
         }
